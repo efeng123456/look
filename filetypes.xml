@@ -1,8 +1,9 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
-      <mapping pattern="a.pth" type="PLAIN_TEXT" />
       <mapping pattern="123" type="PLAIN_TEXT" />
+      <mapping pattern="a.pth" type="PLAIN_TEXT" />
+      <mapping pattern="appium_demo" type="Python" />
     </extensionMap>
   </component>
 </application>
