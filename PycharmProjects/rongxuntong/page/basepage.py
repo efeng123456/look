@@ -46,16 +46,7 @@ class Page(object,Module):
     #         return '<b>' + fun() + '</b>'
     #         return inner
 
-    def getScreenShot(function):
-        print '装饰器'
-        # time = self.getTime()
-        def inner():
 
-            print '测试测试'
-
-        return inner()
-
-    #@getScreenShot
     def get_screenShor(self):
 
         timestr=time.strftime('%Y.%m.%d',time.localtime(time.time()))
