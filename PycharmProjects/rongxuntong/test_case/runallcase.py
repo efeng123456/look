@@ -43,7 +43,8 @@ def runAutomation():
     #filename = dir_report + "\\" + curr_time + '\\TestReport.html'
     filename = dir_report + "\\" + curr_time + '\\TestReport.html'
     """
-    filename = './TestReport.html'
+    curr_time = str(getNowTime())
+    filename = './TestReport'+curr_time+'.html'
     #print filename
     #print "filename : "+filename
     fp=open(filename,'wb')
