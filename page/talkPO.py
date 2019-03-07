@@ -78,7 +78,6 @@ class talkPO(Page):
     def doc_Api_status(self):
         try:
             self.find_elementID('listview')
-            print '公文审批加载成功'
             return True
         except Exception as e:
             print '公文审批加载失败'
