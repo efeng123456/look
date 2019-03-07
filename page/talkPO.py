@@ -79,6 +79,7 @@ class talkPO(Page):
         try:
             self.find_elementID('listview')
             return True
+            print '公文加载成功'
         except Exception as e:
             print '公文审批加载失败'
             self.get_screenSho()
