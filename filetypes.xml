@@ -7,6 +7,7 @@
       <mapping pattern="mailcontent" type="PLAIN_TEXT" />
       <mapping pattern="a.pth" type="PLAIN_TEXT" />
       <mapping pattern="appium_demo" type="Python" />
+      <mapping pattern="con" type="TSLint" />
     </extensionMap>
   </component>
 </application>
