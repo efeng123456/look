@@ -10,16 +10,17 @@ from page.messagePO import messagePO
 #from page.dialogPO2 import dialigPO
 from page.talkPO import talkPO
 import time
-
+from ddt import ddt, data
+@ddt
 class testsengmessage(AppTestCase,messagePO,talkPO):
-
-    def test_sendMessages(self):
+    @data('1','2')
+    def test_sendMessages(self,messages):
         # self.menutapjob()
         # self.menutapmessage()
         self.choicetalk('message')
         time.sleep(2)
 
-        self.message_content_et('test')
+        self.message_content_et(messages)
         self.send_click()
         self.send_status()
 

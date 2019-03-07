@@ -11,13 +11,17 @@ from page.loginPO import LoginPO
 class testlogin(AppTestCase,LoginPO):
 
     def test_login(self):
-        self.dologin()
         try:
             self.driver.find_element_by_id('com.minxing.chamc:id/title')
-            print '登陆成功'
-        except Exception as e:
+            print '状态为已登录'
+        except:
+            self.dologin()
+            try:
+              self.driver.find_element_by_id('com.minxing.chamc:id/title')
+              print '登陆成功'
+            except Exception as e:
             ##print e
-            print '登陆失败'
+                print '登陆失败'
 
 
 if __name__=='__main()__':

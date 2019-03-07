@@ -68,13 +68,15 @@ class talkPO(Page):
         self.find_elementXpath("//android.widget.TextView[contains(@text,'查看')]").click()
     def doc_view_status(self):
         try:
-            self.find_elementXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[2]/android.widget.Image")
+            # self.find_elementXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[2]/android.widget.Image")
+            # self.find_elementXpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[4]/android.widget.Image")
             ##	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[2]
+            self.find_elementXpath(".//android.widget.Image")
             print '预览成功'
             return True
         except Exception as e:
             print '预览失败'
-            self.get_screenSho()
+            self.get_screenShort()
             return False
     def doc_Api_status(self):
         try:

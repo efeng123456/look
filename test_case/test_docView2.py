@@ -30,7 +30,7 @@ class docview(AppTestCase,messagePO,talkPO,Page):
             print ''
 
         else:
-            self.get_screenShor()
+            self.get_screenShort()
             print '执行失败'
         time.sleep(5)
 

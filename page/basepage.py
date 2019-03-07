@@ -47,7 +47,7 @@ class Page(object,Module):
     #         return inner
 
 
-    def get_screenShor(self):
+    def get_screenShort(self):
 
         timestr=time.strftime('%Y.%m.%d',time.localtime(time.time()))
         filename = './errorimg/ %s.png' %timestr

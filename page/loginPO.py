@@ -5,6 +5,7 @@ class LoginPO(Page):
     usernameid = 'com.minxing.chamc:id/username'
     passwordid = "com.minxing.chamc:id/"
     loginid = 'com.minxing.chamc:id/login_btn'
+    login_status='com.minxing.chamc:id/title'
 
     # def chick_permissino(self,search_permission):
     #     self.find_element(search_permission).chick()
@@ -19,3 +20,8 @@ class LoginPO(Page):
         self.input_username()
         self.input_password()
         self.checklogin()
+    def loginStatus(self):
+        try:
+            self.driver.find_element_by_id('com.minxing.chamc:id/title')
+        except:
+            self.dologin()

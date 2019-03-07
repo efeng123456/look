@@ -9,17 +9,20 @@ from page.messagePO import messagePO
 from page.jobdeskPO import jobDeskPO
 from page.talkPO import talkPO
 import time
-
-class testdocApi(AppTestCase,messagePO,jobDeskPO,talkPO):
+from page.loginPO import LoginPO
+class testdocApi(AppTestCase,messagePO,jobDeskPO,talkPO,LoginPO):
 
     def test_docApi(self):
-
+        self.loginStatus()
         self.menutapjob()
         time.sleep(2)
         self.choicjob('公文审批')
         time.sleep(15)
         self.doc_Api_status()
+        print '预览成功'
         self.mailtest()
+
+
 
 if __name__=='__main()__':
     unittest.main
