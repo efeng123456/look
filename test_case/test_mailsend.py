@@ -12,11 +12,11 @@ from page.mailPO import mailPO
 #from page.dialogPO2 import dialigPO
 from page.talkPO import talkPO
 import time
-
-class testmailSend(AppTestCase,messagePO,jobDeskPO,mailPO):
+from page.loginPO import LoginPO
+class testmailSend(AppTestCase,messagePO,jobDeskPO,mailPO,LoginPO):
 
     def test_mailSend(self):
-
+        self.loginStatus()
         self.menutapjob()
         time.sleep(2)
         self.choicjob('企业邮箱')

@@ -9,13 +9,15 @@ import unittest
 from page.messagePO import messagePO
 #from page.dialogPO2 import dialigPO
 from page.talkPO import talkPO
+from page.loginPO import LoginPO
 import time
-class docview(AppTestCase,messagePO,talkPO,Page):
+class docview(AppTestCase,messagePO,talkPO,LoginPO):
 
 
     def test_docViews(self):
         # self.menutapjob()
         # self.menutapmessage()
+        self.loginStatus()
         self.choicetalk('文件预览')
         time.sleep(5)
         self.file_choice()

@@ -4,11 +4,12 @@ from appium import webdriver
 from selenium.webdriver.support.expected_conditions import NoSuchElementException
 #from selenium.webdriver.common.by import By
 import time
+import json
 import platform
 #from selenium.webdriver.support.ui import WebDriverWait
 ##基本的定位方法
-from module.module import Module
-class Page(object,Module):
+
+class Page(object):
     driver =None
     def __init__(self,driver):
         self.driver = driver
@@ -77,3 +78,8 @@ class Page(object,Module):
         self.driver.swipe(x*0.1, y*0.5, x*0.9, y*0.5,200)
     def mailappend(self,mailappend):
         self.mailtest(mailappend)
+    def getconf(sefl):
+        with open("..//conf/config.json",'r') as load_f:
+            load_dict = json.load(load_f)
+            # print(load_dict)["username"]
+            return load_dict["username"],load_dict["password"],load_dict["mailaddress"]

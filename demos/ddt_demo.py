@@ -21,7 +21,7 @@ from ddt_demo.mycode import has_three_elements,is_a_greeting
 @ddt
 class FooTestCase(unittest.TestCase):
 
-    @file_data('test_data_dict.json')
+    @file_data('config.json')
     def test_file_data_json_dict(self, value):
         self.assertTrue(has_three_elements(value))
 

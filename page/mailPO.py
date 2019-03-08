@@ -38,18 +38,20 @@ class mailPO(Page):
             print e
             return False
     def sendmail2(self):
+        a = self.getconf()[2]
         self.driver.find_element_by_xpath("//android.widget.TextView[contains(@text,'写邮件')]").click()
         self.sleeps(3)
-        self.driver.find_element_by_id('com.minxing.chamc:id/contact_btn_container').send_keys('testhrflc@hrflc.com')
+        self.driver.find_element_by_id('com.minxing.chamc:id/contact_btn_container').send_keys(a)
         self.sleeps(3)
-        self.driver.find_element_by_id('com.minxing.chamc:id/subject').send_keys('testSendmail')
+        self.driver.find_element_by_id('com.minxing.chamc:id/subject').send_keys('test')
         self.sleeps(3)
-        self.driver.find_element_by_id('com.minxing.chamc:id/message_content').send_keys('this is a test email')
+        self.driver.find_element_by_id('com.minxing.chamc:id/message_content').send_keys('testmail')
         self.sleeps(3)
         self.driver.find_element_by_id('com.minxing.chamc:id/tv_mx_mail_message_compose_send').click()
         self.sleeps(3)
     def sendmaile(self):
-        self.mailaddress('testhrflce@hrflc.com')
+        a = self.getconf()[2]
+        self.mailaddress(a)
         self.mailSubject('testSendmail')
         self.message_conten('这是一个测试邮件')
         self.message_compose_send()

@@ -9,14 +9,16 @@ import unittest
 from page.messagePO import messagePO
 #from page.dialogPO2 import dialigPO
 from page.talkPO import talkPO
+from page.loginPO import LoginPO
 import time
 from ddt import ddt, data
 @ddt
-class testsengmessage(AppTestCase,messagePO,talkPO):
+class testsengmessage(AppTestCase,messagePO,talkPO,LoginPO):
     @data('1','2')
     def test_sendMessages(self,messages):
         # self.menutapjob()
         # self.menutapmessage()
+        self.loginStatus()
         self.choicetalk('message')
         time.sleep(2)
 
