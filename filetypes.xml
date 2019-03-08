@@ -1,0 +1,13 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="123" type="PLAIN_TEXT" />
+      <mapping pattern="config" type="PLAIN_TEXT" />
+      <mapping pattern="conf" type="PLAIN_TEXT" />
+      <mapping pattern="mailcontent" type="PLAIN_TEXT" />
+      <mapping pattern="a.pth" type="PLAIN_TEXT" />
+      <mapping pattern="appium_demo" type="Python" />
+      <mapping pattern="con" type="TSLint" />
+    </extensionMap>
+  </component>
+</application>
