@@ -20,7 +20,7 @@ class testdocApi(AppTestCase,messagePO,jobDeskPO,talkPO,LoginPO):
         time.sleep(15)
         self.doc_Api_status()
         print '预览成功'
-        self.mailtest()
+
 
 
 
